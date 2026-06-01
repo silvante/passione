@@ -2,7 +2,7 @@ require "sinatra/base"
 
 module Passione::API
   class Server < Sinatra::Base
-    set :port, 4000
+    # set :port, 4000
     set :bind, "0.0.0.0"
     
     # --- actial routes
@@ -12,6 +12,6 @@ module Passione::API
       return {status: "OK"}.to_json
     end
 
-    
+
   end
 end

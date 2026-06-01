@@ -5,8 +5,10 @@ module Passione
   class CLI < Thor
 
     desc "start", "Starts the server"
+    option :port, type: :numeric, default: 4000, desc: "Server port"
     def start
-      start_server
+      port = options[:port]
+      start_server(port)
     end
 
     desc "version", "Shows the current version"
@@ -16,9 +18,11 @@ module Passione
 
     private
 
-    def start_server
+    def start_server(port)
       puts "🚀 Starting sinatra server..."
-      API::Server.run!
+      API::Server.run!(
+        port: port
+      )
     end
   end
 end

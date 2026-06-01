@@ -11,5 +11,7 @@ module Passione::API
       content_type :json
       return {status: "OK"}.to_json
     end
+
+    
   end
 end

@@ -1,3 +1,5 @@
 require "sequel"
 
-DB = Sequel.sqlite("passione.db")
+module Passione
+  DB = Sequel.sqlite("passione.db")
+end

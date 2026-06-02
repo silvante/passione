@@ -1,5 +1,3 @@
 require "sequel"
 
-module Passione::Database
-  DB
-end
+DB = Sequel.sqlite("passione.db")

@@ -2,6 +2,7 @@
 
 require_relative "passione/version"
 require_relative "passione/cli"
+require_relative "passione/database/connection"
 
 Dir[File.join(__dir__, "models", "*.rb")].sort.each do |file|
   require file
